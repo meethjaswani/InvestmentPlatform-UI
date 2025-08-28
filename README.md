@@ -1,7 +1,6 @@
 # Investment Platform - Portfolio Management Dashboard
 
 A comprehensive, production-ready portfolio management dashboard built with modern web technologies for tracking, analyzing, and managing investment portfolios. This application provides a complete solution for individual investors to monitor their financial assets, track performance, and make informed investment decisions.
-<img width="1267" height="661" alt="Screenshot 2025-08-28 at 4 06 18 PM" src="https://github.com/user-attachments/assets/c716c7b5-c90c-49b9-83f3-3c280d10fa24" />
 <img width="1273" height="664" alt="Screenshot 2025-08-28 at 4 03 09 PM" src="https://github.com/user-attachments/assets/caf33fa2-c1f6-4849-8f7d-36891e28e1c5" />
 <img width="1266" height="671" alt="Screenshot 2025-08-28 at 4 05 51 PM" src="https://github.com/user-attachments/assets/42082935-abf2-44b0-983a-64d861a4e3f6" />
 <img width="1267" height="661" alt="Screenshot 2025-08-28 at 4 06 18 PM" src="https://github.com/user-attachments/assets/c716c7b5-c90c-49b9-83f3-3c280d10fa24" />
