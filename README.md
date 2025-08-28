@@ -181,7 +181,7 @@ The easiest way to run the application is using Docker. This ensures consistent 
 ```bash
 # Clone the repository
 git clone https://github.com/meethjaswani/InvestmentPlatform-UI.git
-cd InvestmentPlatform
+cd InvestmentPlatform-UI
 
 # Build and start services
 docker-compose up --build
