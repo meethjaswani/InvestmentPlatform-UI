@@ -1,0 +1,30 @@
+{
+  "name": "investment-platform-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Portfolio Management Dashboard",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:init": "node src/scripts/dbSetup.js init",
+    "db:reset": "node src/scripts/dbSetup.js reset",
+    "db:seed": "node src/scripts/dbSetup.js seed",
+    "db:setup": "node src/scripts/dbSetup.js setup"
+  },
+  "keywords": ["portfolio", "investment", "dashboard", "api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.6",
+    "sequelize": "^6.35.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

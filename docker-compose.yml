@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: investment-platform-backend
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - JWT_SECRET=your_jwt_secret_key_here_change_in_production
+      - DATABASE_URL=./database/investment_platform.db
+    volumes:
+      - backend_data:/app/database
+    ports:
+      - "3001:3001"
+    networks:
+      - investment-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: investment-platform-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    networks:
+      - investment-network
+    depends_on:
+      - backend
+
+volumes:
+  backend_data:
+    driver: local
+
+networks:
+  investment-network:
+    driver: bridge

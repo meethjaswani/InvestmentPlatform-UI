@@ -1,0 +1,164 @@
+.dashboard {
+  padding: 0 20px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  font-size: 18px;
+}
+
+/* Portfolio Overview Cards - Horizontal Layout */
+.overview-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.overview-card {
+  flex: 1;
+  min-width: 200px;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+  background: var(--bg-secondary);
+}
+
+.overview-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.overview-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+
+
+
+
+
+
+
+
+/* No data state */
+.no-data {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 12px;
+  border: 2px dashed var(--border-color);
+  color: var(--text-secondary);
+}
+
+.no-data p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.no-data p:first-child {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .overview-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .overview-card {
+    min-width: auto;
+  }
+  
+  .dashboard-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 0 16px;
+  }
+  
+  .overview-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .overview-card {
+    padding: 20px;
+  }
+  
+  .card-value {
+    font-size: 24px;
+  }
+  
+  .dashboard-section {
+    padding: 24px;
+  }
+  
+  .allocation-item,
+  .investment-item {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-cards {
+    gap: 12px;
+  }
+  
+  .overview-card {
+    padding: 16px;
+  }
+  
+  .overview-card h3 {
+    font-size: 14px;
+  }
+  
+  .card-value {
+    font-size: 20px;
+  }
+  
+  .dashboard-section {
+    padding: 20px;
+  }
+  
+  .investment-name {
+    max-width: 100px;
+  }
+}

@@ -1,0 +1,376 @@
+/* CSS Variables for Light and Dark Themes */
+:root {
+  /* Light Mode (Default) */
+  --bg-primary: #F5F7FA;
+  --bg-secondary: #FFFFFF;
+  --color-primary: #2563EB;
+  --color-accent: #10B981;
+  --color-danger: #DC2626;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --border-color: #E5E7EB;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  /* Dark Mode */
+  --bg-primary: #1E1E2F;
+  --bg-secondary: #2C2C3A;
+  --color-primary: #00C9A7;
+  --color-accent: #FFD369;
+  --color-danger: #FF4D6D;
+  --text-primary: #F1F1F1;
+  --text-secondary: #9CA3AF;
+  --border-color: #374151;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* Global theme application */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure all pages inherit theme */
+#root {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Apply theme variables to existing components */
+.navbar {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand h2 {
+  color: var(--color-primary);
+}
+
+.navbar-item {
+  color: var(--text-secondary);
+}
+
+.navbar-item:hover {
+  color: var(--color-primary);
+  background-color: var(--bg-primary);
+}
+
+.navbar-item.active {
+  color: var(--color-primary);
+  background-color: var(--bg-primary);
+}
+
+.welcome-text {
+  color: var(--text-primary);
+}
+
+.logout-btn {
+  background-color: var(--color-danger);
+}
+
+.logout-btn:hover {
+  background-color: var(--color-danger);
+  filter: brightness(0.9);
+}
+
+/* Dashboard theme */
+.dashboard {
+  background: var(--bg-primary);
+}
+
+.dashboard-header h1 {
+  color: var(--text-primary);
+}
+
+.dashboard-header p {
+  color: var(--text-secondary);
+}
+
+.overview-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.overview-card h3 {
+  color: var(--text-secondary);
+}
+
+.card-value {
+  color: var(--text-primary);
+}
+
+.dashboard-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.dashboard-section h2 {
+  color: var(--text-primary);
+}
+
+.allocation-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.allocation-type {
+  color: var(--text-primary);
+}
+
+.allocation-count {
+  color: var(--text-secondary);
+}
+
+.investment-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.investment-symbol {
+  color: var(--text-primary);
+}
+
+.investment-name {
+  color: var(--text-secondary);
+}
+
+/* Portfolio theme */
+.portfolio {
+  background: var(--bg-primary);
+}
+
+.portfolio-header h1 {
+  color: var(--text-primary);
+}
+
+.portfolio-header p {
+  color: var(--text-secondary);
+}
+
+.summary-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.summary-card h2 {
+  color: var(--text-primary);
+}
+
+.metric {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.metric label {
+  color: var(--text-secondary);
+}
+
+.metric .value {
+  color: var(--text-primary);
+}
+
+.portfolio-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.portfolio-section h2 {
+  color: var(--text-primary);
+}
+
+.allocation-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.allocation-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.allocation-header h3 {
+  color: var(--text-primary);
+}
+
+.allocation-percentage {
+  color: var(--color-primary);
+}
+
+.detail-row span:first-child {
+  color: var(--text-secondary);
+}
+
+.detail-row span:last-child {
+  color: var(--text-primary);
+}
+
+.allocation-bar {
+  background-color: var(--border-color);
+}
+
+.allocation-fill {
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+}
+
+.analytics-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.analytics-card h4 {
+  color: var(--text-primary);
+}
+
+.score-value {
+  color: var(--color-primary);
+}
+
+.analytics-card p {
+  color: var(--text-secondary);
+}
+
+/* Update positive/negative colors */
+.positive {
+  color: var(--color-accent) !important;
+}
+
+.negative {
+  color: var(--color-danger) !important;
+}
+
+/* Error messages */
+.error-message {
+  background: var(--color-danger);
+  color: white;
+  border: 1px solid var(--color-danger);
+}
+
+.dark-mode .error-message {
+  background: rgba(255, 77, 109, 0.2);
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+}
+
+/* No data messages */
+.no-data {
+  color: var(--text-secondary);
+}
+
+.no-data p:first-child {
+  color: var(--text-primary);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  color: var(--color-primary);
+}
+
+/* Forms */
+.form-group label {
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.1);
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  filter: brightness(0.9);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-primary);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: var(--color-danger);
+  filter: brightness(0.9);
+}
+
+/* Mobile menu theme */
+.mobile-menu {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-hover);
+}
+
+.mobile-menu .navbar-user {
+  border-top: 1px solid var(--border-color);
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
